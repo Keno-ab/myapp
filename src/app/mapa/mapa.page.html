@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-input placeholder="Seleccione la direccion"></ion-input>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">mapa</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-img src="http://localhost:8080/src/assets/img/mapa.jpeg" alt="Mapa" style="width: 900px; height: 550px;"> </ion-img>
+
+    <ion-button color= "warning" fill="clear" [routerLink]="['/disponible']">Acpetar</ion-button>
+    <ion-button color= "warning" fill="clear" [routerLink]="['/home']">Cancelar</ion-button>
+
+
+  
+</ion-content>
+
+
