@@ -8,13 +8,21 @@ import { MapaPageRoutingModule } from './mapa-routing.module';
 
 import { MapaPage } from './mapa.page';
 
+
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MapaPageRoutingModule
+    MapaPageRoutingModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule
   ],
   declarations: [MapaPage]
 })
 export class MapaPageModule {}
+

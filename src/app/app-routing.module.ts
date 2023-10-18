@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'disponible',
     loadChildren: () => import('./disponible/disponible.module').then( m => m.DisponiblePageModule)
   },
+  {
+    path: '**',
+    loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
+  },
 ];
 
 @NgModule({
