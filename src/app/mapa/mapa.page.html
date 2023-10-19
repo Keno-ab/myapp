@@ -22,8 +22,10 @@
 <ion-item>
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </ion-item>
-  <ion-img src="http://localhost:8080/src/assets/img/mapa.jpeg" alt="Mapa" style="width: 900px; height: 550px;"> </ion-img>
 
+<div id="map-container">
+  <div id="map"></div>
+</div>
     <ion-button color= "warning" fill="clear" [routerLink]="['/disponible']">Aceptar </ion-button>
     <ion-button color= "warning" fill="clear" [routerLink]="['/home']">Cancelar</ion-button>
 

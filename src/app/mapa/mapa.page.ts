@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
+import { Geolocation, GeolocationPermissionType, PermissionStatus } from '@capacitor/geolocation';
+
+import * as L from 'leaflet'; // Importa la biblioteca Leaflet
+
+
+
 
 @Component({
   selector: 'app-mapa',
@@ -8,12 +14,18 @@ import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
 })
 export class MapaPage implements OnInit {
 
-  constructor(private router:Router, private activatedRouter: ActivatedRoute) { }
+  map!: L.Map;
+
+  constructor(private router:Router, private activatedRouter: ActivatedRoute) {
+
+   }
 
   public user = {
     usuario: "",
     password: ""
   }
+
+  
 
 
   ngOnInit() {
@@ -28,5 +40,30 @@ export class MapaPage implements OnInit {
 
 
     })
+  }
+ //map=19/-33.43308/-70.61519
+  ionViewDidEnter() {
+    // Configura un mapa de Leaflet con OpenStreetMap
+    this.map = L.map('map').setView([-33.43308,-70.61519],20); // Latitud y longitud iniciales
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(this.map);
+
+    // Añade un marcador al mapa (ejemplo)
+    L.marker([-33.43308,-70.61519]).addTo(this.map).bindPopup('¡Estas aqui!').openPopup();
+  }
+
+  isGeolocationPermissionGranted(permissions: GeolocationPermissionType | PermissionStatus): boolean {
+    return (permissions as string) === 'granted';
+  }
+
+  async getCurrentLocation() {
+    try {
+      const coordinates = await Geolocation.getCurrentPosition();
+      console.log('Ubicación actual:', coordinates);
+    } catch (error) {
+      console.error('Error al obtener la ubicación:', error);
+    }
   }
 }

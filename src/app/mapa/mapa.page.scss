@@ -1,0 +1,10 @@
+#map-container {
+    width: 1500px !important;
+    height: 400px !important;
+    overflow: hidden !important;
+  }
+  
+  #map {
+    width: 100%; /* Asegura que el mapa ocupe todo el espacio del contenedor */
+    height: 100%; /* Asegura que el mapa ocupe todo el espacio del contenedor */
+  }

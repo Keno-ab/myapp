@@ -25,20 +25,6 @@ user = {
 }
 
 
-/*
-  enviarLogin(){
-    this.auth.login(this.user.username,this.user.password).then(()=>{
-      if (this.auth.activo){
-        let navigationExtras: NavigationExtras = {
-          state: {user:this.user}
-        }
-        this.router.navigate(['/mapa']), navigationExtras);
-      } else {
-        this.mensaje = "Debe ingresar sus credenciales";
-      }
-*/
-
-
 
 enviarLogin() {
         this.auth.login(this.user.usuario, this.user.password).then(() => {
