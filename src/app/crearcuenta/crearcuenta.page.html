@@ -1,40 +1,56 @@
-<ion-header [translucent]="true">
-
-</ion-header>
-
-<ion-content [fullscreen]="true" >
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<form [formGroup]="registrationForm" (ngSubmit)="registroUsuario()">
+  <ion-item ion-text-center>
+    <ion-label position="floating" color="blank">Nombre de usuario</ion-label>
+    <ion-input formControlName="usuario" type="text"></ion-input>
+  </ion-item>
   
 
-  <ion-card color="warning">
-    <ion-card-header>
-      <ion-card-title>Creacion de Cuenta</ion-card-title>
-    </ion-card-header>
-    <ion-list>
-      <ion-list>
-        <ion-item>
-          <ion-input label="Usuario" placeholder="Ingrese Nombre Usuario"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input label="Correo" type="mail"placeholder="Ingrese su Correo"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input label="Contraseña" type="password" value=""></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-toggle [enableOnOffLabels]="true">Cuenta con movilizacion propia?</ion-toggle>
-        </ion-item>
-      </ion-list>
-    </ion-list>
-    <ion-button color= "light" fill="clear" [routerLink]="['/home']">Crear Cuenta</ion-button>
-    <ion-button color= "light" fill="clear" [routerLink]="['/home']">Cancelar</ion-button>
+  <ion-item ion-text-center>
+    <ion-label position="floating" color= "Blank" >Correo electrónico</ion-label>
+    <ion-input formControlName="correo" type="email"></ion-input>
+  </ion-item>
+
+  <ion-item ion-text-center>
+    <ion-label position="floating" color= "Blank" >Contraseña</ion-label>
+    <ion-input formControlName="password" type="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" type="submit" color="warning">Registrarse</ion-button>
+  <ion-button expand="full" type="submit"  color="warning" [routerLink]="['/home']">Cancelar</ion-button>
+
+</form>
 
 
-  </ion-card>
+
+
+
+
+<ion-card color="light" >
+  <ion-card-header color="warning">
+    <ion-card-title>Requerimientos</ion-card-title>
+
+  </ion-card-header>
+  <ion-card-content>
+    <br>
+    <div *ngIf="registrationForm.get('usuario')?.hasError('required')">
+      <ion-text color="danger">El nombre de usuario es requerido.</ion-text>
+    </div>
   
-</ion-content>
+    <div *ngIf="registrationForm.get('correo')?.hasError('required')">
+      <ion-text color="danger">El correo es requerido.</ion-text>
+    </div>
+  
+    <div *ngIf="registrationForm.get('correo')?.hasError('email')">
+      <ion-text color="danger">El correo no es válido.</ion-text>
+    </div>
+  
+    <div *ngIf="registrationForm.get('password')?.hasError('required')">
+      <ion-text color="danger">La contraseña es requerida.</ion-text>
+    </div>
+  
+    <div *ngIf="registrationForm.get('password')?.hasError('minlength')">
+      <ion-text color="danger">La contraseña debe tener al menos 6 caracteres.</ion-text>
+    </div>  </ion-card-content>
+</ion-card>
+
+

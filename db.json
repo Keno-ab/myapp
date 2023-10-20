@@ -1,0 +1,75 @@
+{
+  "datos-inicio-sesion": [
+    {
+      "id": 1,
+      "usuario": "nombre_de_usuario",
+      "password": "contraseña_secreta"
+    },
+    {
+      "usuario": "SALAO",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "usuario": "SALAO",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "usuario": "ADSAD",
+      "password": "ASDSAD",
+      "id": 4
+    },
+    {
+      "usuario": "salao",
+      "correo": "ASDAD@ASDSAD.COM",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "usuario": "salao",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "usuario": "salao",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "usuario": "SALAO322",
+      "correo": "S@GMAIL.COM",
+      "password": "321321",
+      "id": 8
+    },
+    {
+      "usuario": "SALAO3221",
+      "correo": "S@GMAIL.COM",
+      "password": "321321",
+      "id": 9
+    },
+    {
+      "usuario": "VARDOC1",
+      "correo": "V@GMAIL.COM",
+      "password": "123456",
+      "id": 10
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

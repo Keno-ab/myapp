@@ -12,10 +12,9 @@
       <ion-card-subtitle>PathFinder</ion-card-subtitle>
     </ion-card-header>
     <ion-list>
-      
+      <ion-button (click)="solicitarViaje()">PAGAR</ion-button>
+      <ion-text *ngIf="avisoSolicitud" color="success">{{ avisoSolicitud }}</ion-text>
     </ion-list>
-    <ion-button color= "light" fill="clear" [routerLink]="['/mapa']">Pagar</ion-button>
-
 
 
   </ion-card>
@@ -28,11 +27,13 @@
       <ion-card-subtitle>Nissan V16</ion-card-subtitle>
     </ion-card-header>
     <ion-list>
-
+      <ion-button (click)="solicitarViaje()">PAGAR</ion-button>
+      <ion-text *ngIf="avisoSolicitud" color="success">{{ avisoSolicitud }}</ion-text>
     </ion-list>
-    <ion-button color= "light" fill="clear" [routerLink]="['/mapa']">Pagar</ion-button>
-
-
+    <ion-content>
+      <ion-button (click)="solicitarViaje()">PAGAR</ion-button>
+      <ion-text *ngIf="avisoSolicitud" color="success">{{ avisoSolicitud }}</ion-text>
+    </ion-content>
 
   </ion-card>
   <ion-card color="warning">
@@ -44,10 +45,11 @@
       <ion-card-subtitle>Ferrari 296 GTB</ion-card-subtitle>
     </ion-card-header>
     <ion-list>
-
+      <ion-button (click)="solicitarViaje()">PAGAR</ion-button>
+      <ion-text *ngIf="avisoSolicitud" color="success">{{ avisoSolicitud }}</ion-text>
     </ion-list>
-    <ion-button color= "light" fill="clear" [routerLink]="['/mapa']">Pagar</ion-button>
 
+    
 
 
   </ion-card>

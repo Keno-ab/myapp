@@ -9,7 +9,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-img src=""></ion-img>
+  <ion-img src="                "> </ion-img>
 
   <ion-card color="warning" >
     <ion-card-header>
@@ -22,7 +22,7 @@
           <ion-input [(ngModel)]="user.usuario" label="Usuario" placeholder="Ingrese Nombre Usuario"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input label="Contraseña" type="password" value=""></ion-input>
+          <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" value=""></ion-input>
         </ion-item>
  
 
@@ -33,6 +33,12 @@
     <ion-button color= "light" fill="clear" (click)="enviarLogin()">Ingresar</ion-button>
     <ion-button color= "light" fill="clear"  [routerLink]="['/crearcuenta']">Crear Cuenta</ion-button>
     <ion-button color= "light" fill="clear" [routerLink]="['/recupera']">Olvido contraseña?</ion-button>
+
+    <ion-card color="light" >
+      <ion-card-content>
+        {{ mensaje }}
+      </ion-card-content>
+    </ion-card>
 
 
   </ion-card>

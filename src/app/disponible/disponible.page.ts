@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-disponible',
@@ -6,10 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./disponible.page.scss'],
 })
 export class DisponiblePage implements OnInit {
+  avisoSolicitud: string = ''; 
 
-  constructor() { }
+  constructor(private zone: NgZone, private changeDetector: ChangeDetectorRef) {}
 
   ngOnInit() {
+
   }
 
+  calcularValorViaje(): number {
+
+    return 3500.0;
+  }
+
+  solicitarViaje() {
+    const fecha = new Date();
+    const horaActual = fecha.toLocaleTimeString();
+
+    const valorViaje = this.calcularValorViaje(); 
+
+  
+    this.avisoSolicitud = `Solicitud de viaje a las ${horaActual} horas con un valor de $${valorViaje.toFixed(2)} CLP`;
+    this.changeDetector.detectChanges();
+  }
 }

@@ -12,10 +12,11 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [IonicModule,FormsModule,BrowserAnimationsModule,BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicStorageModule.forRoot(),MatProgressSpinnerModule,MatProgressBarModule],
+  imports: [HttpClientModule,IonicModule,FormsModule,BrowserAnimationsModule,BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicStorageModule.forRoot(),MatProgressSpinnerModule,MatProgressBarModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
   
