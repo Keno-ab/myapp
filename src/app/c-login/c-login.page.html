@@ -1,11 +1,12 @@
+
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">login conductor</ion-title>
     </ion-toolbar>
   </ion-header>
-  
-  <ion-card color="warning" >
+  <ion-card color="success" >
     <ion-card-header>
       <ion-card-title>Bienvenido a TeLlevoAPP</ion-card-title>
       <ion-card-subtitle>Ingrese a su cuenta</ion-card-subtitle>
@@ -13,10 +14,10 @@
     <ion-list>
       <ion-list>
         <ion-item>
-          <ion-input [(ngModel)]="user.usuario" label="Usuario" placeholder="Ingrese Nombre Usuario"></ion-input>
+          <ion-input [(ngModel)]="conductor.usuario" label="Usuario" placeholder="Ingrese Nombre Usuario"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" value=""></ion-input>
+          <ion-input [(ngModel)]="conductor.password" label="Contraseña" type="password" value=""></ion-input>
         </ion-item>
  
 
@@ -38,10 +39,10 @@
   </ion-card>
   
   <div style="display: flex; justify-content: center; align-items: center;">
-    <ion-button color="warning" fill="clear" [routerLink]="['/c-login']">
-      Ingresar como conductor
+    <ion-button color="success" fill="clear" [routerLink]="['/home']">
+      Ingresar como pasajero
     </ion-button>
   </div>
-  
 
+  
 </ion-content>

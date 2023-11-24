@@ -28,9 +28,19 @@ const routes: Routes = [
     loadChildren: () => import('./disponible/disponible.module').then( m => m.DisponiblePageModule)
   },
   {
+    path: 'c-login',
+    loadChildren: () => import('./c-login/c-login.module').then( m => m.CLoginPageModule)
+  },
+  {
+    path: 'c-pasajeros',
+    loadChildren: () => import('./c-pasajeros/c-pasajeros.module').then( m => m.CPasajerosPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
   },
+
+
 ];
 
 @NgModule({

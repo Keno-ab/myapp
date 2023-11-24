@@ -53,6 +53,33 @@
       "correo": "V@GMAIL.COM",
       "password": "123456",
       "id": 10
+    },
+    {
+      "usuario": "peneman",
+      "correo": "pene@pene",
+      "password": "123123",
+      "id": 11
+    },
+    {
+      "usuario": "peneman",
+      "password": "123123",
+      "id": 12
+    },
+    {
+      "usuario": "jeibi",
+      "correo": "jeibi@mail",
+      "password": "123123",
+      "id": 13
+    },
+    {
+      "usuario": "jeibi",
+      "password": "123123",
+      "id": 14
+    },
+    {
+      "usuario": "SALAO",
+      "password": "123",
+      "id": 15
     }
   ],
   "posts": [
