@@ -80,6 +80,17 @@
       "usuario": "SALAO",
       "password": "123",
       "id": 15
+    },
+    {
+      "usuario": "TEST1",
+      "correo": "TEST@TEST",
+      "password": "123123",
+      "id": 16
+    },
+    {
+      "usuario": "TEST1",
+      "password": "123123",
+      "id": 17
     }
   ],
   "posts": [
