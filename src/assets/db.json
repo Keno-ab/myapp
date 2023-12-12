@@ -16,8 +16,8 @@
       "id": 3
     },
     {
-      "usuario": "ADSAD",
-      "password": "ASDSAD",
+      "usuario": "Test01",
+      "password": "123123",
       "id": 4
     },
     {
@@ -55,17 +55,6 @@
       "id": 10
     },
     {
-      "usuario": "peneman",
-      "correo": "pene@pene",
-      "password": "123123",
-      "id": 11
-    },
-    {
-      "usuario": "peneman",
-      "password": "123123",
-      "id": 12
-    },
-    {
       "usuario": "jeibi",
       "correo": "jeibi@mail",
       "password": "123123",
@@ -80,6 +69,32 @@
       "usuario": "SALAO",
       "password": "123",
       "id": 15
+    },
+    {
+      "usuario": "salao",
+      "password": "123",
+      "id": 16
+    },
+    {
+      "usuario": "salao",
+      "password": "123",
+      "id": 17
+    },
+    {
+      "usuario": "salao",
+      "password": "123",
+      "id": 18
+    },
+    {
+      "usuario": "test",
+      "correo": "test@test.com",
+      "password": "123123",
+      "id": 19
+    },
+    {
+      "usuario": "salao",
+      "password": "123",
+      "id": 20
     }
   ],
   "posts": [
